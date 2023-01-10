@@ -19,8 +19,19 @@ namespace APIsAndJSON
 
                 Console.WriteLine();
             }
-            
 
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("========== Calling the OpenWeatherMap API for the current weather ==========");
+
+            var weather = new OpenWeatherMapAPI();
+
+            Console.WriteLine("Please select a city");
+            var city = Console.ReadLine();
+            Console.WriteLine("Please enter your api_Key");
+            var apiKey = Console.ReadLine();
+            weather.GetCurrentWeather(apiKey, city);
 
         }
 
